@@ -2,6 +2,17 @@
 // Add translations for each page element here
 const translations = {
   en: {
+  topTitle4: "Arctic Circle",
+  heading4: "Arctic Circle's Melting Glaciers",
+  learnMore4: "Learn More",
+  howToHelp4: "How to Help!",
+  bp4_1: "Warming temperatures caused by the burning of greenhouse gases",
+  bp4_2: "Melts glaciers at rapid speeds because average temperatures are now higher",
+  bp4_3: "Melting ice also contributes to rising sea levels",
+  bp4_4: "Destroys habitats for many species within the Arctic Circle",
+  help4_1: "Try to carpool with people or ride a bike, it releases less emissions into the air",
+  help4_2: "Shut off lights and appliances when not in use",
+  help4_3: "Use energy star appliances (Approved appliances that use less energy)",
     home: "Home",
     back: "Back",
     page2: "Page 2",
