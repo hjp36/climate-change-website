@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+<!--Refreshes index.html after 180 seconds-->
+  <meta http-equiv="refresh" content="180;url=index.html">
+<!--Creates 1s fade-in animation-->
+  <style>
+  body {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  .fixed-1920x1080 {
+    background: url('galaxy.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  /* small additions for the globe + menu buttons */
+  .maincontent { display:flex; flex-direction:column; align-items:center; padding:1.5rem; }
+  .title { font-size:1.6rem; margin:0 0 0.75rem 0; color:#111; }
+  .globe { width: clamp(160px, 32vmin, 360px); height: clamp(160px,32vmin,360px); border-radius:50%; overflow:hidden; margin-bottom:1rem; }
+  .globe-inner { width:100%; height:100%; background-position:center; background-size:cover; box-shadow: inset 0 -18px 60px rgba(0,0,0,0.6); border-radius:50%; }
+  .button-row { display:flex; gap:0.75rem; align-items:center; justify-content:center; width: min(92%, 720px); margin-top:0.5rem }
+  .menu-btn { flex:1 1 0; padding:.9rem .75rem; font-size:1.05rem; background: linear-gradient(180deg,#4fb0ff,#0077d9); color:#fff; text-align:center; border-radius:12px; text-decoration:none; box-shadow:0 10px 26px rgba(0,0,0,0.55); }
+  .menu-btn:active { transform: translateY(1px); }
+  @media (max-width:600px) { .button-row { flex-direction:column; } .menu-btn { width:100%; } }
+</style>
+</head>
+
+<body class="fixed-1920x1080">
+  <!-- kiosk-app removed: content now fills window -->
+    <ul>
+        <li><a href="index.html" class="button">Back</a></li>
+    <li style="float:left"><p>Touchscreen Interface Design Toolkit</li>
+  </ul>
+
+    <br>
+
+  <div class="maincontent">
+    <h1 class="title">Help save our world!</h1>
+    <div class="globe"><div class="globe-inner" style="background-image:url('earth.jpg')" aria-hidden="true"></div></div>
+    <div class="button-row" role="navigation" aria-label="Main menu">
+  <a class="menu-btn" href="menuPage1.html">North America</a>
+  <a class="menu-btn" href="menuPage2.html">Africa</a>
+  <a class="menu-btn" href="menuPage3.html">South America</a>
+  <a class="menu-btn" href="menuPage4.html">Asia</a>
+    </div>
+  </div>
+
+
+  </div> <!-- end kiosk-app -->
+  </body>
+  </html>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+<!--Refreshes index.html after 180 seconds-->
+  <meta http-equiv="refresh" content="180;url=index.html">
+<!--Creates 1s fade-in animation-->
+  <style>
+  body {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  .fixed-1920x1080 {
+  background: url('background.jpg') no-repeat 35% center fixed;
+  background-size: cover;
+  }
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+</head>
+
+<body class="fixed-1920x1080">
+<div class="menu">
+    <ul>
+  <li><a href="index.html" class="button">Home</a></li>
+    <li style="float:left"><p>Page 2</li>
+  </ul>
+</div>
+
+    <br>
+
+  <div class= "maincontent">
+    <div style="background:rgba(0,0,0,0.82); border-radius:18px; padding:2.2rem 2.5rem; max-width:600px; margin:2.5rem auto 0 auto; box-shadow:0 6px 32px rgba(0,0,0,0.25);">
+      <div style="display: flex; align-items: center; gap: 1.2rem;">
+        <h2 style="margin: 0; color:#fff;">Somalia Droughts</h2>
+        <a href="#" class="learn-more-btn" style="position:static;transform:none;top:auto;right:auto;animation:none;font-size:1.1rem;padding:0.5rem 1.5rem;background:black;">Learn More</a>
+      </div>
+    </div>
+    <ul id="page2-bullets" style="display:none; margin-top:1.2rem; font-size:1.25rem; color:#fff;">
+      <li> Increasing temperatures and altering rain patterns</li>
+      <li> Leads to more evaporation</li>
+      <li> Failed seasons</li>
+      <li> More severe and prolonged droughts that kill agriculture</li>
+    </ul>
+  <a href="#" id="page2-help-btn" class="learn-more-btn" style="display:none; margin-top:2.25rem; background:#222; font-size:1rem; padding:0.5rem 1.2rem;">How to Help!</a>
+    <div id="page2-help-panel" style="display:none; background:rgba(0,0,0,0.82); border-radius:18px; padding:2.2rem 2.5rem; max-width:600px; margin:2.5rem auto 0 auto; box-shadow:0 6px 32px rgba(0,0,0,0.25);">
+      <ul id="page2-help-bullets" style="margin-top:1.2rem; font-size:1.25rem; color:#fff;">
+        <li>Shortening your shower by 5 minutes, it can save up to 15 gallons of water</li>
+        <li>Reduce, reuse, and recycle to minimize waste and conserve energy and resources</li>
+      </ul>
+    </div>
+  </div>
+
+<script>
+  let firstClick2 = true;
+  document.querySelector('.learn-more-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    var bullets = document.getElementById('page2-bullets');
+    if (bullets.style.display === 'none') {
+      bullets.style.display = 'block';
+      if (firstClick2) {
+        document.getElementById('page2-help-btn').style.display = 'inline-block';
+        firstClick2 = false;
+      }
+    } else {
+      bullets.style.display = 'none';
+    }
+  });
+
+  document.getElementById('page2-help-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    var panel = document.getElementById('page2-help-panel');
+    if (panel.style.display === 'none') {
+      panel.style.display = 'block';
+    } else {
+      panel.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+<!--Refreshes index.html after 180 seconds-->
+  <meta http-equiv="refresh" content="180;url=index.html">
+<!--Creates 3s fade-in animation-->
+  <style>
+    body {
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <ul>
+      <li><a href="video.html" class="button">Next</a></li>
+        <li><a href="index.html" class="button">Next</a></li>
+    <li style="float:left"><p>Touchscreen Interface Design Toolkit</li>
+  </ul>
+
+    <br>
+
+    <div class="flex-container">
+      <div text-align="center">
+        <img src="img6.jpg" class="img-responsive" style="width:100%"alt="Image" >
+        <!-- Trigger/Open The Modal -->
+        <button class="button" id="myBtn">Learn More</button>
+    </div>
+
+      <div>
+        <p style="font-size:12pt;">A Flexible Layout must have a parent element with the <em>display</em> property set to <em>flex</em>.</p>
+      </div>
+    </div>
+
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+<img src="img6.jpg" width="50%">
+
+        <p>Some text in the Modal.</p>
+          <span class="close"><button class="button">Close</button></span>
+      </div>
+
+    </div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+  <!-- Stops video/audio from playing on modal close -->
+  <script>
+  $(function(){
+  $("body").on('hidden.bs.modal', function (e) {
+  var $iframes = $(e.target).find("iframe");
+  $iframes.each(function(index, iframe){
+  $(iframe).attr("src", $(iframe).attr("src"));
+  });
+  });
+  });
+  </script>
+
+
+</body>
+</html>

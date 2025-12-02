@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+<!--Refreshes index.html after 180 seconds-->
+  <meta http-equiv="refresh" content="180;url=index.html">  
+<!--Creates 3s fade-in animation-->
+  <style>
+    body {
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+</style>  
+</head>
+
+<body>
+    <ul>
+      <li><a href="modal.html" class="button">Next</a></li>
+        <li><a href="index.html" class="button">Back</a></li>
+    <li style="float:left"><p>Touchscreen Interface Design Toolkit</li>
+  </ul>
+
+    <br>
+
+    <div class="flex-container">
+      <div text-align="center">
+        <a href="videoplayer.html">
+        <img src="img4.jpg" class="img-responsive" style="width:100%" alt="Add alt-text"></a>
+
+      <div>
+        <p style="font-size:12pt;">This page previews a video and offer users the chance to watch a video that opens in a new page. Remember to add subtitles to all videos.</p>
+
+        <div><a href="videoplayer.html" class="button">Play</a></div>
+      </div>
+    </div>
+
+</body>
+</html>

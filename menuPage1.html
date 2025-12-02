@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>North America</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+<!--Refreshes index.html after 180 seconds-->
+  <meta http-equiv="refresh" content="180;url=index.html">
+<!--Creates 1s fade-in animation-->
+  <style>
+  body {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  .fixed-1920x1080 {
+    background: url('cali.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+</head>
+
+<body class="fixed-1920x1080">
+<div class="menu">
+    <ul>
+        <li><a href="index.html" class="button">Home</a></li>
+    <li style="float:left"><p>North America</li>
+  </ul>
+</div>
+
+    <br>
+
+  <div class= "maincontent">
+  <div style="background:rgba(0,0,0,0.82); border-radius:18px; padding:2.2rem 2.5rem; max-width:600px; margin:2.5rem auto 0 auto; box-shadow:0 6px 32px rgba(0,0,0,0.25);">
+      <div style="display: flex; align-items: center; gap: 1.2rem;">
+        <h2 style="margin: 0; color:#fff;">The California Wildfires</h2>
+        <a href="#" class="learn-more-btn" style="position:static;transform:none;top:auto;right:auto;animation:none;font-size:1.1rem;padding:0.5rem 1.5rem;background:black;">Learn More</a>
+      </div>
+        <a href="#" id="more-info-btn" class="learn-more-btn" style="display:none; margin-bottom:1.5rem; margin-top:-0.25rem; background:#222; font-size:1rem; padding:0.5rem 1.2rem;">How to Help!</a>
+      <ul id="wildfire-bullets" style="display:none; margin-top:1.2rem; font-size:1.25rem; color:#fff;">
+        <li> Rising temperatures</li>
+        <li> Drying vegetation out, causing fire to spread more easily</li>
+        <li> Impact on air quality and health</li>
+        <li> Destruction of homes and habitats</li>
+      </ul>
+  <div id="more-info-panel" style="display:none; background:rgba(0,0,0,0.82); border-radius:18px; padding:2.2rem 2.5rem; max-width:600px; margin:2.5rem auto 0 auto; box-shadow:0 6px 32px rgba(0,0,0,0.25);">
+      <ul id="more-info-bullets" style="margin-top:1.2rem; font-size:1.25rem; color:#fff;">
+        <li>Shop secondhand and reduce plastic use to minimize waste and consumption</li>
+        <li>Plant native species in your yard, which are more drought-tolerant</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+
+<script>
+  let firstClick = true;
+  document.querySelector('.learn-more-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    var bullets = document.getElementById('wildfire-bullets');
+    if (bullets.style.display === 'none') {
+      bullets.style.display = 'block';
+      if (firstClick) {
+        document.getElementById('more-info-btn').style.display = 'inline-block';
+        firstClick = false;
+      }
+    } else {
+      bullets.style.display = 'none';
+    }
+  });
+
+  document.getElementById('more-info-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    var panel = document.getElementById('more-info-panel');
+    if (panel.style.display === 'none') {
+      panel.style.display = 'block';
+    } else {
+      panel.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>

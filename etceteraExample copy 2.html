@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+<!--Refreshes index.html after 180 seconds-->
+  <meta http-equiv="refresh" content="180;url=index.html">
+<!--Creates 3s fade-in animation-->
+  <style>
+    body {
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <ul>
+      <li><a href="modal.html" class="button">Next</a></li>
+        <li><a href="index.html" class="button">Back</a></li>
+    <li style="float:left"><p>Touchscreen Interface Design Toolkit</li>
+  </ul>
+
+    <br>
+
+    <div class="sidebar">
+    <a href="#menu">Home</a>
+    <a class="active" href="page1Example.html">Page 1</a>
+    <a href="">Page 2</a>
+    <a href="">Page 3</a>
+    <a href="">etcetera</a>
+  </div>
+
+  <div class= "maincontent">
+    <h2>Notice the changing menu</h2>
+    <p>This feature helps users understand where the are in the system, what Norman calls the "visibility of the system."</p>
+
+    <p> </p>
+  </div>
+
+  </body>
+  </html>
+
+</body>
+</html>
