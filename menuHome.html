@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <script src="lang.js"></script>
 <!--Refreshes index.html after 180 seconds-->
   <meta http-equiv="refresh" content="180;url=index.html">
 <!--Creates 1s fade-in animation-->
@@ -39,22 +40,26 @@
 </head>
 
 <body class="fixed-1920x1080">
+<div style="position:fixed; bottom:1.5rem; left:1.5rem; z-index:9999; display:flex; gap:0.75rem;">
+  <button id="lang-en-btn" style="background:#222; color:#fff; border:none; border-radius:8px; padding:0.75rem 2rem; font-size:1.1rem; font-weight:bold; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.15);">English</button>
+  <button id="lang-es-btn" style="background:#222; color:#fff; border:none; border-radius:8px; padding:0.75rem 2rem; font-size:1.1rem; font-weight:bold; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.15);">Español</button>
+</div>
   <!-- kiosk-app removed: content now fills window -->
     <ul>
-        <li><a href="index.html" class="button">Back</a></li>
-    <li style="float:left"><p>Touchscreen Interface Design Toolkit</li>
+  <li><a href="index.html" class="button" data-i18n="home">Home</a></li>
+    
   </ul>
 
     <br>
 
   <div class="maincontent">
-    <h1 class="title">Help save our world!</h1>
+  <h1 class="title" data-i18n="homeTitle">Help save our world!</h1>
     <div class="globe"><div class="globe-inner" style="background-image:url('earth.jpg')" aria-hidden="true"></div></div>
     <div class="button-row" role="navigation" aria-label="Main menu">
-  <a class="menu-btn" href="menuPage1.html">California</a>
-  <a class="menu-btn" href="menuPage2.html">Somalia</a>
-  <a class="menu-btn" href="menuPage3.html">South Sudan</a>
-  <a class="menu-btn" href="menuPage4.html">Artic Circle</a>
+  <a class="menu-btn" href="menuPage1.html" data-i18n="california">California</a>
+  <a class="menu-btn" href="menuPage2.html" data-i18n="somalia">Somalia</a>
+  <a class="menu-btn" href="menuPage3.html" data-i18n="southSudan">South Sudan</a>
+  <a class="menu-btn" href="menuPage4.html" data-i18n="arcticCircle">Arctic Circle</a>
     </div>
   </div>
 

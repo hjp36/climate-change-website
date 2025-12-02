@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <script src="lang.js"></script>
   <meta http-equiv="refresh" content="180;url=index.html">
   <style>
     body {
@@ -23,13 +24,17 @@
   </style>
 </head>
 <body class="fixed-1920x1080">
+<div style="position:fixed; bottom:1.5rem; left:1.5rem; z-index:9999; display:flex; gap:0.75rem;">
+  <button id="lang-en-btn" style="background:#222; color:#fff; border:none; border-radius:8px; padding:0.75rem 2rem; font-size:1.1rem; font-weight:bold; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.15);">English</button>
+  <button id="lang-es-btn" style="background:#222; color:#fff; border:none; border-radius:8px; padding:0.75rem 2rem; font-size:1.1rem; font-weight:bold; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.15);">Español</button>
+</div>
 <div class="menu">
     <ul>
-      <li><a href="index.html" class="button">Home</a></li>
+  <li><a href="index.html" class="button" data-i18n="home">Home</a></li>
       <li style="position:absolute; top:4rem; left:1.5rem; list-style:none;">
-        <a href="menuHome.html" class="button" style="background:#222; color:#fff; border-radius:8px; padding:0.5rem 1.2rem; font-size:1rem; font-weight:bold; text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,0.15);">&#8592; Back</a>
+  <a href="menuHome.html" class="button" style="background:#222; color:#fff; border-radius:8px; padding:0.5rem 1.2rem; font-size:1rem; font-weight:bold; text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,0.15);" data-i18n="back">&#8592; Back</a>
       </li>
-      <li style="float:left"><p>Page 4</li>
+  <li style="float:left"><p data-i18n="topTitle4">Arctic Circle</p></li>
     </ul>
 </div>
 
@@ -38,22 +43,22 @@
   <div class= "maincontent">
     <div style="background:rgba(0,0,0,0.82); border-radius:18px; padding:2.2rem 2.5rem; max-width:600px; margin:2.5rem auto 0 auto; box-shadow:0 6px 32px rgba(0,0,0,0.25);">
       <div style="display: flex; align-items: center; gap: 1.2rem;">
-        <h2 style="margin: 0; color:#fff;">Arctic Circle's Melting Glaciers</h2>
-        <a href="#" class="learn-more-btn" style="position:static;transform:none;top:auto;right:auto;animation:none;font-size:1.1rem;padding:0.5rem 1.5rem;background:black;">Learn More</a>
+  <h2 style="margin: 0; color:#fff;" data-i18n="heading4">Arctic Circle's Melting Glaciers</h2>
+  <a href="#" class="learn-more-btn" style="position:static;transform:none;top:auto;right:auto;animation:none;font-size:1.1rem;padding:0.5rem 1.5rem;background:black;" data-i18n="learnMore4">Learn More</a>
       </div>
     </div>
-  <a href="#" id="page4-help-btn" class="learn-more-btn" style="display:none; margin-top:calc(3rem + 1in); background:#222; font-size:1rem; padding:0.5rem 1.2rem;">How to Help!</a>
+  <a href="#" id="page4-help-btn" class="learn-more-btn" style="display:none; margin-top:2.25rem; background:#222; font-size:1rem; padding:0.5rem 1.2rem;" data-i18n="howToHelp4">How to Help!</a>
     <ul id="page4-bullets" style="display:none; margin-top:1.2rem; font-size:1.25rem; color:#fff;">
-      <li> Warming temperatures caused by the burning of greenhouse gases</li>
-      <li> Melts glaciers at rapid speeds because average temperatures are now higher</li>
-      <li> Melting ice also contributes to rising sea levels </li>
-      <li> Destroys habitats for many species within the Arctic Circle</li>
+  <li data-i18n="bp4_1">Warming temperatures caused by the burning of greenhouse gases</li>
+  <li data-i18n="bp4_2">Melts glaciers at rapid speeds because average temperatures are now higher</li>
+  <li data-i18n="bp4_3">Melting ice also contributes to rising sea levels</li>
+  <li data-i18n="bp4_4">Destroys habitats for many species within the Arctic Circle</li>
     </ul>
     <div id="page4-help-panel" style="display:none; background:rgba(0,0,0,0.82); border-radius:18px; padding:2.2rem 2.5rem; max-width:600px; margin:2.5rem auto 0 auto; box-shadow:0 6px 32px rgba(0,0,0,0.25);">
       <ul id="page4-help-bullets" style="margin-top:1.2rem; font-size:1.25rem; color:#fff;">
-        <li>Try to carpool with people or ride a bike, it releases less emissions into the air</li>
-        <li>Shut off lights and appliances when not in use</li>
-        <li>Use energy star appliances (Approved appliances that use less energy)</li>
+  <li data-i18n="help4_1">Try to carpool with people or ride a bike, it releases less emissions into the air</li>
+  <li data-i18n="help4_2">Shut off lights and appliances when not in use</li>
+  <li data-i18n="help4_3">Use energy star appliances (Approved appliances that use less energy)</li>
       </ul>
     </div>
   </div>

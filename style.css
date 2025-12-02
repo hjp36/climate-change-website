@@ -1,3 +1,15 @@
+/* Colorblind mode styles */
+/* Colorblind mode filters for entire page */
+body.cb-redgreen {
+  filter: grayscale(0.3) sepia(0.6) hue-rotate(-35deg) contrast(1.1) !important;
+}
+body.cb-blueyellow {
+  filter: grayscale(0.3) sepia(0.6) hue-rotate(60deg) contrast(1.1) !important;
+}
+body.cb-achromat {
+  filter: grayscale(1) contrast(1.1) !important;
+}
+/* You can further customize these filters for accessibility */
 /* Right-side Learn More button */
 .learn-more-btn {
   position: fixed;
