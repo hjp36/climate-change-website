@@ -1,291 +1,571 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Title</title>
+  <title>Composing Digital Media</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Galaxy background and starfield */
-    .start-screen {
-      position: fixed;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: radial-gradient(ellipse at bottom, #02020a 0%, #000 50%), #000;
-      overflow: hidden;
-      z-index: 9999;
-      color: #fff;
-      -webkit-tap-highlight-color: transparent;
-    }
-    /* drifting star layers */
-    .starfield, .starfield::before, .starfield::after {
-      position: absolute;
-      inset: 0;
-      background-repeat: repeat;
-      background-size: contain;
-      will-change: transform;
-      opacity: 0.9;
-      pointer-events: none;
-    }
-    /* distant tiny stars */
-    .starfield {
-      background-image: radial-gradient(white 1px, rgba(255,255,255,0.05) 1px, transparent 2px), radial-gradient(white 1px, rgba(255,255,255,0.06) 1px, transparent 2px);
-      background-size: 2px 2px, 3px 3px;
-      transform: translateZ(0);
-      animation: driftSlow 60s linear infinite;
-      filter: drop-shadow(0 0 2px rgba(255,255,255,0.05));
-    }
-    /* medium stars */
-    .starfield::before {
-      content: '';
-      background-image: radial-gradient(white 1.5px, rgba(255,255,255,0.08) 1.5px, transparent 3px);
-      background-size: 6px 6px;
-      opacity: 0.6;
-      animation: drift 120s linear infinite;
-    }
-    /* brighter twinkling stars */
-    .starfield::after {
-      content: '';
-      background-image: radial-gradient(white 2px, rgba(255,255,255,0.12) 2px, transparent 4px);
-      background-size: 30px 30px;
-      opacity: 0.45;
-      animation: driftReverse 200s linear infinite;
-    }
+    <link rel="stylesheet" type="text/css" href="style.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">  </script>
 
-    @keyframes driftSlow { from { transform: translateX(0); } to { transform: translateX(-2000px); } }
-    @keyframes drift { from { transform: translateX(0) translateY(0); } to { transform: translateX(-1200px) translateY(600px); } }
-    @keyframes driftReverse { from { transform: translateX(0); } to { transform: translateX(1200px); } }
+</head>
+<body>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:70px;">I am Hailey Peterson</h1>
+    <p style="font-size:25px;">Projects in Digital Composing Portfolio</p>
+  </div>
+</div>
 
 
-    <body>
-      <!-- kiosk-app removed: content now fills window -->
-        <!-- Full-screen galaxy start overlay with rotating Earth -->
-        <div class="start-screen" id="startScreen">
-          <div class="starfield" aria-hidden="true"></div>
-          <div class="start-content" role="main" aria-label="Home start screen">
-            <h1 class="title">Help save our world!</h1>
 
-            <!-- globe supports custom image textures: place earth.jpg in project root or upload via the button -->
-            <div class="globe" aria-hidden="false">
-              <div class="globe-inner earth-rotate" id="globeInner" role="img" aria-label="Rotating Earth image" style="background-image: url('earth.jpg');"></div>
-            </div>
 
-            <a href="menuHome.html" class="start-btn" id="startButton" role="button" aria-label="Start">Start</a>
-            <div class="hint">Tap the Start button to begin</div>
-          </div>
-        </div>
+<div class="container-fluid bg-w text-center">
+    <h1>Phase 1: Exploring Digital Media </h1><br>
+  <div class="row">
+    <div class="col-sm-4">
+        <h3>Fuego</h3>
+          <a href="https://hjp36.github.io/Fuego/" target="_blank">
+         <div class="hover">
+       <img src="fuegoss.png" class="img-responsive" style="width:100%"alt="Image" >
+              </div>
+     </a>
+        <p>This first project was very simple and straightfoward. I talk about my interests, knowledge, and plans for the future.</p>
+    </div>
+       <div class="col-sm-4">
+        <h3>Experiment</h3>
+          <a href="https://hjp36.github.io/experiment/" target="_blank">
+         <div class="hover">
+       <img src="experimentss.png" class="img-responsive" style="width:100%"alt="Image" >
+              </div>
+     </a>
+        <p>This second project was about creating something completely up to you and it was all experimental. So I decided to add my favorite pokemon.</p>
+    </div>
+    <div class="col-sm-4">
+        <h3>Multi-</h3>
+          <a href="https://hjp36.github.io/multipage/" target="_blank">
+         <div class="hover">
+       <img src="pokemon.png" class="img-responsive" style="width:100%"alt="Image" >
+              </div>
+     </a>
+        <p>This project had me creating a website with multiple pages. I decided to show my favorite pokemon on each page.</p>
+    </div>
+  </div>
+</div>
 
-        <ul>
-         <li><a href="video.html" class="button">Next</a></li>
-        <li style="float:left"><p>Help save our world!</p></li>
-        </ul>
 
+
+
+
+    <div class="container-fluid bg-w text-center">
+ <h3 class="margin">Phase 1 Course Goals</h3>
         <br>
 
-        <!-- Slideshow container -->
-        <div class="slideshow-container">
-
-          <!-- Full-width images with number and caption text -->
-          <div class="mySlides fade">
-            <img src="img1.jpg" style="width:100%">
-            <div class="text">Caption Text</div>
-          </div>
-
-          <div class="mySlides fade">
-            <img src="img2.jpg" style="width:100%">
-            <div class="text">Caption Two</div>
-          </div>
-
-          <div class="mySlides fade">
-            <img src="img3.jpg" style="width:100%">
-            <div class="text">Caption Three</div>
-          </div>
-
-          <!--Check this W3 for documentation. https://www.w3schools.com/howto/howto_js_slideshow.asp-->
-
-          <!-- Next and previous buttons
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="row">
+    <div class="col-sm-4">
+           <p><em>1. Foster the creative habits of mind</em></p>
+  <p style="text-align: left"> I feel like I have been able to foster the creative habits of my mind in many different ways in this class. In Making 1 I made an about me web page and it really expanded my creative habits. Making 1 was a great first project for me because it really showed me how creative I really could be. There are little to no guidlines to follow on most assignments which allows me to create almost anything I have in mind. I get to encorporate peices of my life and things I have a passion for, this allows me to be creative and show people a little bit about who I am as a person which is really cool to me. </p>
         </div>
-        -->
-
-        <!-- The dots/circles
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
+            <div class="col-sm-4">
+        <p><em>2. Engage with others in a workshop environment.</em></p>
+  <p style="text-align: left">I have had great experience with engaging with others in a workshop enviroment. In Making 2 I was having trouble getting my pokemon balls float around the screen. So i had to talk to other students around the room to get help and ideas on how ti fix my project. Making 2 taught me why its important to interect and help others but also how helpful it is too because after I got help I was able to fix my project.I think it is really important to get used to asking other people for help. Having workshops at the begining of each class helps me build my communication skills and my knowledge of the overal topic we are learning about. I have gotton great amounts of advice from other classmates, they have even helped me to fix or improve my website.</p>
         </div>
-        -->
+          <div class="col-sm-4">
+        <p><em>3.	Think deeply about craft. </em></p>
+  <p style="text-align: left">When creating a project, I must think deeply about my craft. In making 2 I wanted to show big aspects of Pokemon as a game and not just as pictures. So in order to do so I had to think deeply about how I was going to represent that. I ended up choosing to have poekmon balls float around the screen to keep some of the game aspect right. Making 2 was great for making me think deeper. I have to make sure that it is appropriate, interesting, appeals to others and myself, and is gonna be something I have a good amount of knowledge on or a good interest in learning more about the topic. I want to make something meaningful as well, so I think about all of the ways I can make my project meaningful to myself and others.
+  
+  </p>
+        </div>
+    </div>
+
+   <div class="row">
+    <div class="col-sm-2">
+       </div>
+    <div class="col-sm-4">
+        <p><em>4. Engage in sustained research and skills development. </em></p>
+  <p style="text-align: left"> Within this class I have already learned a lot and built many new useful skills and have more experience in reasearching. In making 3 I had to do some extra research in order to get my mult-page website working. I was unsure what coding to use to get my buttons to move so I went on one of our edtiing websites and looked for answers there. Making 3 helped me learn to research and work through problems rather then just give up. We read weekly in this class to get a deeper explanation of what we are learning about. Being able to research and learn more about a topic and then be able to further apply it within my project is very important. I also have picked up skills I either had little to no knowledge about before class this semester. Learing how to code is a skill that is completely new to me and has been super helpful and interesting. </p>
+        </div>
+            <div class="col-sm-4">
+        <p><em>5. Learn to present your work</em></p>
+  <p style="text-align: left">I have learned how to present my work in this class better than I have before. When presenting my Making 1 project I was nervous but did it so that everyone could see what I made. Making 1 helped me to get over my fear of presenting during class. Being able to show everyone what I have created gives me a sense of pride. This also makes me want to do my best so that when I go to show everyone what I made it can catch their eyes or make them interested in what I have created. On top of that, it makes me take a different approach to some assignments because I have to always make sure that the website would make sense to others and that what I am making is being represented in the correct way.   </p>
+        </div>
+ <div class="col-sm-2">
+       </div>
+</div>
+    </div>
+
+
+
+  <div class="container-fluid bg-b text-center">
+  <h1>Phase 2/3: Expository Documentaries and Animation Effects</h1><br>
+  <div class="row">
+
+
+    <div class="col-sm-4">
+        <h3>Making 8: Adobe Character </h3>
+          <a href="https://youtu.be/XS9I8ckEZ4I?si=CiBkxDNNC-bjECK3" target="_blank"></a> 
+         <div class="hover">
+       <img src="cat.jpg" class="img-responsive" style="width:100%"alt="Image" >
+              </div>
+     </a>
+        <p>We used Adobe to create an animated talking character that also uses AI to change your voice.</p>
+    </div>
+
+     <div class="col-sm-4">
+        <h3> Making 6: Adobe After Effects Title </h3>
+          <a href="https://youtu.be/bBXW2ZpZMWU">
+         <div class="hover">
+       <img src="climate.jpg" class="img-responsive" style="width:100%"alt="Image" >
+              </div>
+     </a>
+        <p>We used Adobe After Effects to create an animated title that we could use within our projects.</p>
+    </div>
+
+    <div class="col-sm-4">
+       <h3>Making 5: Video Essay</h3>
+         <a href="https://youtube.com/shorts/PtcQF-mBGC8?feature=share" data-toggle="modal" href="#portfolioModal3">
+        <div class="hover">
+      <img src="video.jpg" class="img-responsive" style="width:100%"alt="Image" >
+             </div>
+    </a>
+       <p>We used Premiere Pro to edit B-roll and make it into a video essay.</p>
+   </div>
       </div>
-    }
-  </style>
-</head>
 
-<body class="fixed-1920x1080">
-  <!-- Full-screen galaxy start overlay with rotating Earth -->
-  <div class="start-screen" id="startScreen">
-    <div class="starfield" aria-hidden="true"></div>
-    <div class="start-content" role="main" aria-label="Home start screen">
-      <h1 class="title">Help save our world!</h1>
+    <div class="col-sm-4">
+        <h3>Making 4: Text/ Image Essay</h3>
+          <a href="https://youtube.com/shorts/O5Y8D0DopwE?feature=share" data-toggle="modal" href="#portfolioModal4">
+         <div class="hover">
+       <img src="image.png" class="img-responsive" style="width:100%"alt="Image" >
+              </div>
+     </a>
+        <p>We used Premiere Pro to create a video of images.</p>
+    </div>
 
-      <!-- globe supports custom image textures: place earth.jpg in project root or upload via the button -->
-      <div class="globe" aria-hidden="false">
-        <div class="globe-inner earth-rotate" id="globeInner" role="img" aria-label="Rotating Earth image" style="background-image: url('earth.jpg');"></div>
+     <div class="col-sm-4">
+        <h3>Making 7: Adobe After Effects </h3>
+          <a href="https://youtu.be/qzCnYdJNr9M" data-toggle="modal" href="#portfolioModal5">
+         <div class="hover">
+       <img src="change.jpg" class="img-responsive" style="width:100%"alt="Image" >
+              </div>
+     </a>
+        <p>We used Adobe After Effects to make another title screen that we could use in our final project.</p>
+    </div>
+
+
+   </div>
       </div>
 
-      <a href="menuHome.html" class="start-btn" id="startButton" role="button" aria-label="Start">Start</a>
-      <div class="hint">Tap the Start button to begin</div>
+
+       <div class="container-fluid bg-b text-center">
+     <h3 class="margin">Phase 2/3 Course Goals</h3>
+
+  <h4><em>1. Foster the creative habits of mind</em></h4>
+  <p style="text-align: left">I fostered the creative habits of mind. Throughout Phase 2 I have been way more comfortable with trying new creative ideas that I may have leaned away from ealier in the semester. In making 8 we created an ai character that is able to track our faces and move. This opened my mind into many new ideas and directions that I could move foward with to start formulating ideas for my final project. As well as in Making 6 I was creative in coming up with a design that would be able to catch people's attention and made them interested. </p>
+     <br>
+        <h4><em>2.	Engage with others in a workshop environment</em></h4>
+  <p style="text-align: left"> I have enggaged with others in a workshop enviroment a lot more in Phase 2. When sharing my work with others they are able to give me good advice that can improve my project and push my ideas into more detailed areas. Like in Making 7 I talked to others and tehy were able to give me advice on what colors would catch their eye and what kinds of animations and effects would draw people in. They also helped me narrow my research that we did each week. Being able to share it with them allowed me to know if I was going down the right path and making sure all my information made sense.</p>
+      <br>
+        <h4><em>3.	Think deeply about craft</em></h4>
+  <p style="text-align: left"> I think deeply about craft when working on my projects. In making 5 I had to think deeply about my craft by chossing what videos would fit together and how that would be veiwed by the audience. As well as in Making 8 I thought deeply about which character would be the best to use to make people want to continue interacting with it. Lastly, I thought deeply about my craft when researching, I needed to be presice and know what I wanted others to get after seeing my final project.</p>
+      <br>
+            <h4><em>4.	Engage in sustained research and skills development. </em></h4>
+  <p style="text-align: left">I engage in sustained research and skills development. I was consitstantly researching about climate change for my final project for four weeks in a row. Each week I would find it getting easier to find the inportant imformation and scrap teh rest. Researching helped me to get a deeper understanding of my topic and to make sure that I was going to be putting correct and valid information on my website. I also had skill developments. In making 6 and 7 I learned how to use Adobe After Effects, which is an app I had never used before. It has allowed me to experiement and create new things for my project that I wouldn't have been able to do before this. </p>
+      <br>
+            <h4><em>5. Learn to present your work</em></h4>
+  <p style="text-align: left">I have learned to present my work within phase 2 better than phase 1. I have become more cinfident in presenting my work to others. Like in making 4 and 5 I was excited to present my work to others and show them a little part of my life outside of this class. The biggest part about presetning my work was the big presentation that would explain what our website would be like. I had to learn how to make the audience get as excited about my project as I am. I would have to say things differently and present my work in an order that would compliment eachother and build to make it give off the effect I wanted </p>
+           <br>
+    </div>
+
+
+
+
+    <div class="container-fluid bg-w text-center">
+  <h1>Phase 4: Presentation and Interactive Installation</h1><br>
+  <div class="row">
+    <div class="col-sm-6">
+        <h3>Website</h3>
+          <a href="https://hjp36.github.io/climate-change-website/" data-toggle="modal" href="#portfolioModal7">
+         <div class="hover">
+       <img src="website.jpg" class="img-responsive" style="width:100%"alt="Image" >
+              </div>
+     </a>
+        <p>This is my Website that I made to educate people about Climate Change.</p>
+    </div>
+
+     <div class="col-sm-6">
+        <h3>Presentation</h3>
+          <a href="https://docs.google.com/presentation/d/1GR8c4ZuoI0KBYnoE5WQWQGddDFi5boy0v8YEVokt_vo/edit?usp=sharing" data-toggle="modal" href="#portfolioModal8">
+         <div class="hover">
+       <img src="presentation.jpg" class="img-responsive" style="width:100%"alt="Image" >
+              </div>
+     </a>
+        <p>This is my Presentation that I made to explain my Website about Climate Change.</p>
+    </div>
+
+  </div>
+</div>
+
+</div>
+</div>
+
+
+
+
+ <div class="container-fluid bg-w text-center">
+  <h3>Phase 4 Course Goals</h3> <br>
+  <br>
+
+  <div class="row">
+  <div class="col-sm-4">
+         <p><em>1. Foster the creative habits of mind</em></p>
+<p style="text-align: left">I fostered the create habits of mind during Phase 4 of my portfolio. For my website I wanted to make something that people would be interested in and that is a problem within our society, so I had to think deeply about how I could present my findings in a way that would be informing while also have a sense of urgency. So in my website I coded it and set it up in a way that would make people have to click to see more. If I were to have presented all of the information at once, it would have been overwhelming to the user and they liekly wouldn't obtaina ll the information on the screen. So I decided to make a creative choice to have pieces of information pop up bit by bit so the user coudld feel like they have control and are not being rushed to go through my kiosk.</p>
+      </div>
+          <div class="col-sm-4">
+      <p><em>2. Engage with others in a workshop environment.</em></p>
+<p style="text-align: left">I engaged with others in a workshop enviroment the most in Phase 4 of my portfolio. Every week I we would come in and have time to share the progress of our website each week. When sharing my presentation with the class everyone was super helpful in giving me advice on how to include information and make changes to my website that would benefit the user. Additionally, I would get feedback from other students that would allow me to push my ideas down further rabbit holes to then present certain information that is more in dept so people can acutally learn more about climate change. </p>
+      </div>
+        <div class="col-sm-4">
+      <p><em>3.	Think deeply about craft. </em></p>
+<p style="text-align: left">I thought deeply abou tmy craft when wokring on my website for Pase 4 of my portfilio. Almost all of the four research weeks I was thiunking hard about how I wanted people to preceive my website and what I would want them to take away from seeing and interacting with my kiosk. So when I showed my presentation to the class I had thought a lot abou thwat slides to include and how to say it to the class to make them interested in my project. Also when designing ,y website I would think abou twhere the user would expect certain buttons to be and how they would expect a kiosk like mine to be set up. With that in mind, I made the website as similar to other kiosks that I looked at so that the user would be more inclined to continue interacting with my kiosk.  </p>
+      </div>
+  </div>
+
+ <div class="row">
+  <div class="col-sm-2">
+     </div>
+  <div class="col-sm-4">
+      <p><em>4. Engage in sustained research and skills development. </em></p>
+<p style="text-align: left">I engaged in sustained research and skills development. Even after we were done with our research, I was still looking things up and reading more to get a deeper understanding of ceratin aspects of Climate change. Also when coding my website I learned a lot more about code than I ever have, which has increased my ability to read, write, and hack coding.</p>
+      </div>
+          <div class="col-sm-4">
+      <p><em>5. Learn to present your work</em></p>
+<p style="text-align: left">I learned to repsent my work the most efficiantly in Phase 4 of my portfolio. When we had our interactive istallation workshop in class where we all showed eachother the websites that we made over the course of the semester I was super excited and ready to show people what I made. I made sure that I knew everything that I did when making the website so that I could answer any other additional questions they had as well as just giving them more information as they were interacting with my kiosk.</p>
+      </div>
+<div class="col-sm-2">
+     </div>
+</div> 
+
+</div>
+     <br>
+
+
+    <div class="container-fluid text-center">
+ <img src="steve.jpeg" class="center-large-image" alt="Steve" style="max-width:25%;max-height:25%;">
+
+
+
+<p>generated by Pitt Fuego</p>
+    <p> “Why make a spark when you can light a fire?</p>
+   </div>
+
+<br>
+<br>
+
+<!-- Stops video/audio from playing on modal close -->
+<script>
+$(function(){
+$("body").on('hidden.bs.modal', function (e) {
+var $iframes = $(e.target).find("iframe");
+$iframes.each(function(index, iframe){
+$(iframe).attr("src", $(iframe).attr("src"));
+});
+});
+});
+</script>
+
+</body>
+   </html>
+
+
+    <!-- Modal 1 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-lg">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/c66RN87YjNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <ul>
-   <li><a href="video.html" class="button">Next</a></li>
-  <li style="float:left"><p>Help save our world!</p></li>
-</ul>
+        <!-- Modal 2 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-lg">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <img class="img-responsive" src="steve.jpeg" style="width:100%" alt="">
 
-<br>
-
-<!-- Slideshow container -->
-<div class="slideshow-container">
-
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-    <img src="img1.jpg" style="width:100%">
-    <div class="text">Caption Text</div>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="mySlides fade">
-    <img src="img2.jpg" style="width:100%">
-    <div class="text">Caption Two</div>
+        <!-- Modal 3 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-lg">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <img class="img-responsive" src="steve.jpeg" style="width:100%" alt="">
+
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="mySlides fade">
-    <img src="img3.jpg" style="width:100%">
-    <div class="text">Caption Three</div>
+        <!-- Modal 4
+Are you pasting in a PDF link? Try using an iframe.
+<iframe src="" alt="" width="95%" height="600"></iframe>
+      -->
+  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-lg">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <img class="img-responsive" src="steve.jpeg" style="width:100%" alt="">
+
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!--Check this W3 for documentation. https://www.w3schools.com/howto/howto_js_slideshow.asp-->
-
-  <!-- Next and previous buttons
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
--->
-
-<!-- The dots/circles
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
--->
-
-<script>
-
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 8000); // Change image every 8 seconds
-}
-
-</script>
-
-<script>
-// Galaxy background loader and optional dev-mode uploader
-(function(){
-  const startScreen = document.getElementById('startScreen');
-  if(!startScreen) return;
-
-  // If an image was saved in localStorage (data URL), use it first
-  const saved = localStorage.getItem('kiosk:galaxyImage');
-  if(saved) {
-    startScreen.style.backgroundImage = `url(${saved})`;
-    startScreen.style.backgroundSize = 'cover';
-    startScreen.style.backgroundPosition = 'center';
-    const sf = startScreen.querySelector('.starfield'); if(sf) sf.style.display = 'none';
-  } else {
-    // Otherwise try to load a local file named galaxy.jpg placed next to index.html
-    const test = new Image();
-    test.onload = function() {
-      startScreen.style.backgroundImage = `url('galaxy.jpg')`;
-      startScreen.style.backgroundSize = 'cover';
-      startScreen.style.backgroundPosition = 'center';
-      const sf = startScreen.querySelector('.starfield'); if(sf) sf.style.display = 'none';
-    };
-    test.onerror = function() {
-      // keep the CSS starfield if galaxy.jpg not present
-    };
-    test.src = 'galaxy.jpg';
-  }
-
-  // Dev-mode uploader: only visible if ?dev=1 is present in the URL
-  try {
-    const params = new URLSearchParams(location.search);
-  if(params.get('dev') === '1') {
-      const container = document.createElement('div');
-      container.style.position = 'absolute';
-      container.style.top = '12px';
-      container.style.right = '12px';
-      container.style.zIndex = 10001;
-      container.style.display = 'flex';
-      container.style.gap = '8px';
-
-      const label = document.createElement('label');
-      label.className = 'start-btn';
-      label.style.padding = '0.4rem 0.8rem';
-      label.style.fontSize = '0.9rem';
-      label.style.borderRadius = '8px';
-      label.style.background = 'rgba(255,255,255,0.06)';
-      label.style.cursor = 'pointer';
-      label.style.userSelect = 'none';
-      label.textContent = 'Upload Galaxy';
-
-      const input = document.createElement('input');
-      input.type = 'file';
-      input.accept = 'image/*';
-      input.style.display = 'none';
-      input.id = 'galaxyFile';
-
-      label.htmlFor = 'galaxyFile';
-
-      input.addEventListener('change', (e)=>{
-        const f = e.target.files && e.target.files[0];
-        if(!f) return;
-        const url = URL.createObjectURL(f);
-        startScreen.style.backgroundImage = `url(${url})`;
-        startScreen.style.backgroundSize = 'cover';
-        startScreen.style.backgroundPosition = 'center';
-        const sf = startScreen.querySelector('.starfield'); if(sf) sf.style.display = 'none';
-
-        // Persist a data URL in localStorage (may fail for large files)
-        const reader = new FileReader();
-        reader.onload = function(evt){
-          try { localStorage.setItem('kiosk:galaxyImage', evt.target.result); } catch(_) { /* ignore if too large */ }
-        };
-        reader.readAsDataURL(f);
-      });
-
-      container.appendChild(label);
-      container.appendChild(input);
-      document.body.appendChild(container);
-    }
-  } catch (err) { /* ignore */ }
-
-})();
-</script>
 
 
-</body>
-</html>
+        <!-- Modal 5 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-lg">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <img class="img-responsive" src="steve.jpeg" style="width:100%" alt="">
+
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        <!-- Modal 6 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-lg">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <img class="img-responsive" src="steve.jpeg" style="width:100%" alt="">
+
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        <!-- Modal 7 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-lg">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <img class="img-responsive" src="steve.jpeg" style="width:100%" alt="">
+
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        <!-- Modal 8 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-lg">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <img class="img-responsive" src="steve.jpeg" style="width:100%" alt="">
+
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        <!-- Modal 9 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-lg">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <img class="img-responsive" src="steve.jpeg" style="width:100%" alt="">
+
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+           <!-- Modal 10 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-lg">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <img class="img-responsive" src="steve.jpeg" style="width:100%" alt="">
+
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+           <!-- Modal 11 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-lg">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <img class="img-responsive" src="steve.jpeg" style="width:100%" alt="">
+
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
